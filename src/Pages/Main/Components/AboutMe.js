@@ -7,21 +7,21 @@ function AboutMe() {
             <S.Flex>
                 <S.Flex1>
                     <S.Flex2>
-                        <div>이모지</div>
+                        <div>🙋🏻‍♀️</div>
                         <div>
                             <S.ContentDetail>이름</S.ContentDetail>
                             <div>구현서</div>
                         </div>
                     </S.Flex2>
                     <S.Flex2>
-                        <div>이모지</div>
+                        <div>🎂</div>
                         <div>
                             <S.ContentDetail>생년월일</S.ContentDetail>
                             <div>95.04.14</div>
                         </div>
                     </S.Flex2>
                     <S.Flex2>
-                        <div>이모지</div>
+                        <div>🏠</div>
                         <div>
                             <S.ContentDetail>주소지</S.ContentDetail>
                             <div>경기도 화성시 동탄</div>
@@ -33,24 +33,25 @@ function AboutMe() {
             <S.Flex>
                 <S.Flex1>
                     <S.Flex2>
-                        <div>이모지</div>
+                        <div>☎️</div>
                         <div>
                             <S.ContentDetail>연락처</S.ContentDetail>
                             <div>010-3353-7844</div>
                         </div>
                     </S.Flex2>
                     <S.Flex2>
-                        <div>이모지</div>
+                        <div>📨</div>
                         <div>
                             <S.ContentDetail>이메일</S.ContentDetail>
                             <div>koohs414@naver.com</div>
                         </div>
                     </S.Flex2>
                     <S.Flex2>
-                        <div>이모지</div>
+                        <div>🎓</div>
                         <div>
                             <S.ContentDetail>학력</S.ContentDetail>
-                            <div>중앙대 (국제물류학)</div>
+                            <div>중앙대</div>
+                            <div>국제물류학과</div>
                         </div>
                     </S.Flex2>
                 </S.Flex1>
@@ -64,8 +65,7 @@ export default AboutMe;
 const Wrap = styled.div`
     width: 100vw;
     height: 40vh;
-    margin: 80vh auto 0;
-    border: solid 1px red;
+    margin: 90vh auto 10vh;
     & > div {
         width: max-content;
         margin: 0 auto;

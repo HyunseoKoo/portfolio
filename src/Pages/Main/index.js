@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import AboutMe from "./Components/AboutMe";
 import Skills from "./Components/skills";
+import Archiving from "./Components/archiving";
 
 function MainPage() {
     return (
@@ -8,9 +9,11 @@ function MainPage() {
             <S.BackgroundZone>
                 <S.Content1>-구현서-</S.Content1>
                 <div>웹 개발자 포트폴리오</div>
+                <div>셀프 동기부여를 잘하며 즐겁게 공부하는 사람입니다.</div>
             </S.BackgroundZone>
             <AboutMe />
             <Skills />
+            <Archiving />
         </S.Wrap>
     )
 }

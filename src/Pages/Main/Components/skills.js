@@ -11,9 +11,10 @@ function Skills() {
 export default Skills;
 
 const Wrap = styled.div`
+    box-sizing: border-box;
     background-color: #FFD400;
-    width: 100vw;
-    height: 50vh;
+    width: 100%;
+    height: 80vh;
     margin-top: 100px;
     z-index: 110;
 `;
