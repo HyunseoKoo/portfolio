@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import AboutMe from "./Components/AboutMe";
 import Skills from "./Components/skills";
 import Archiving from "./Components/archiving";
+import Project from "./Components/project";
 
 function MainPage() {
     return (
@@ -14,6 +15,7 @@ function MainPage() {
             <AboutMe />
             <Skills />
             <Archiving />
+            <Project />
         </S.Wrap>
     )
 }
