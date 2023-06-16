@@ -18,9 +18,7 @@ const Wrap = styled.div`
     width: 100%;
     height: 100%;
     background-color: #003458;
-    & > div:nth-child(4) {
-        padding-bottom: 10px;
-    }
+    padding: 10px
 `;
 
 const Title = styled.div`

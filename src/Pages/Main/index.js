@@ -3,6 +3,7 @@ import AboutMe from "./Components/AboutMe";
 import Skills from "./Components/skills";
 import Archiving from "./Components/archiving";
 import Project from "./Components/project";
+import Career from "./Components/career";
 
 function MainPage() {
     return (
@@ -16,6 +17,7 @@ function MainPage() {
             <Skills />
             <Archiving />
             <Project />
+            <Career />
         </S.Wrap>
     )
 }
