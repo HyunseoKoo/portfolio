@@ -11,14 +11,194 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/4a58f96b9a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <script src="src/main.js" defer></script>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header__logo">
+            <img class="header__logo__img" src="images/favicon.ico" alt="logo"/>
+            <h1 class="header__logo__title"><a href="#">구현서 포트폴리오</a></h1>
+        </div>
+        <nav>
+            <ul class="header__menu">
+                <li><a class="header__menu__item active" href="#home">Home</a></li>
+                <li><a class="header__menu__item" href="#about">About</a></li>
+                <li><a class="header__menu__item" href="#skills">Skills</a></li>
+                <li><a class="header__menu__item" href="#projects">Projects</a></li>
+                <li><a class="header__menu__item" href="#archive">Archive</a></li>
+                <li><a class="header__menu__item" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="section">
+            <img class="home__avatar" src="images/profile.png" alt="profile">
+            <h2 class="home__title">안녕하세요, <br /><strong class="home__title--strong">구현서</strong>입니다 </h2>
+            <p class="home__description">매일매일 성장하는 프론트엔드 개발자가 되고 싶습니다 :)</p>
+            <a class="home__contact" href="#about">Contact me</a>
+        </section>
+        <section id="about" class="section max-container">
+            <h2 class="title">About me</h2>
+            <p class="description">
+                되고</br>
+                싶은</br>
+                개발자?</br>
+            </p>
+            <ul class="abouts">
+                <li class="about">
+                    <i class="fa-solid fa-user about__icon"></i>
+                    <p class="about__title">이름</p>
+                    <p>구현서</p>
+                </li>
+                <li class="about">
+                    <i class="fa-solid fa-cake-candles about__icon"></i>
+                    <p class="about__title">생년월일</p>
+                    <p>95.04.14</p>
+                </li>
+                <li class="about">
+                    <i class="fa-solid fa-location-dot about__icon"></i>
+                    <p class="about__title">주소지</p>
+                    <p>경기도 화성시 동탄</p>
+                </li>
+                <li class="about">
+                    <i class="fa-solid fa-phone about__icon"></i>
+                    <p class="about__title">연락처</p>
+                    <p>010-3353-7844</p>
+                </li>
+                <li class="about">
+                    <i class="fa-solid fa-envelope about__icon"></i>
+                    <p class="about__title">이메일</p>
+                    <p>koohs414@gmail.com</p>
+                </li>
+                <li class="about">
+                    <i class="fa-solid fa-school about__icon"></i>
+                    <p class="about__title">학력</p>
+                    <p>중앙대학교 국제물류학과</p>
+                </li>
+            </ul>
+        </section>
+        <section id="skills" class="section">
+            <div class="max-container">
+                <h2 class="title">My Skills</h2>
+            <p class="description">Skills & Attributes</p>
+            <p>어필하고 싶은 스킬, 강점, 프로그래밍 지식</p>
+            <div class="skills">
+                <section class="skills__coding">
+                    <h3 class="skills__title">Coding Skills</h3>
+                    <ul>
+                        <li class="bar">
+                            <div class="bar__metadata"><span>HTML</span><span>95%</span></div>
+                            <div class="bar__bg"><div class="bar__value" style="width: 98%"></div></div>
+                        </li>
+                        <li class="bar">
+                            <div class="bar__metadata"><span>CSS</span><span>95%</span></div>
+                            <div class="bar__bg"><div class="bar__value" style="width: 98%"></div></div>
+                        </li>
+                        <li class="bar">
+                            <div class="bar__metadata"><span>JavaScript</span><span>90%</span></div>
+                            <div class="bar__bg"><div class="bar__value" style="width: 90%"></div></div>
+                        </li>
+                        <li class="bar">
+                            <div class="bar__metadata"><span>React</span><span>80%</span></div>
+                            <div class="bar__bg"><div class="bar__value" style="width: 80%"></div></div>
+                        </li>
+                        <li class="bar">
+                            <div class="bar__metadata"><span>Web APIs</span><span>70%</span></div>
+                            <div class="bar__bg"><div class="bar__value" style="width: 70%"></div></div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="skills__tools">
+                    <h3 class="skills__title">Tools</h3>
+                    <ul>
+                        <li>Visual Studio Code</li>
+                        <li>Git & GitHub</li>
+                        <li>Figma</li>
+                        <li>Notion</li>
+                        <li>Discord</li>
+                    </ul>
+                </section>
+            </div>
+            </div>
+        </section>
+        <section id="projects" class="section">
+            <h2 class="title">Project</h2>
+            <p class="description">설명</p>
+            <button>All <span>?</span></button>
+            <ul>
+                <li><a href="#" target="_blank">
+                    <img src="images/projects/메인프로젝트.png" alt="메인프로젝트">
+                    <div>
+                        <h3>Project #1</h3>
+                        <p>React를 활용한 중고거래 서비스 [줍줍마켓] 웹사이트</p>
+                    </div>
+                </a></li>
+                <li><a href="#" target="_blank">
+                    <img src="images/projects/project2.webp" alt="메인프로젝트">
+                    <div>
+                        <h3>Project #2</h3>
+                        <p>개인 프로젝트</p>
+                    </div>
+                </a></li>
+                <li><a href="#" target="_blank">
+                    <img src="images/projects/project3.webp" alt="메인프로젝트">
+                    <div>
+                        <h3>Project #3</h3>
+                        <p>Open Api를 활용한 영화 소개 웹사이트</p>
+                    </div>
+                </a></li>
+                <li><a href="#" target="_blank">
+                    <img src="images/projects/project4.webp" alt="메인프로젝트">
+                    <div>
+                        <h3>Project #4</h3>
+                        <p>순수 html, css를 활용한 포트폴리오 웹사이트</p>
+                    </div>
+                </a></li>
+            </ul>
+
+        </section>
+        <section id="archive" class="section">
+            <h2 class="title">Archive</h2>
+            <p class="description">설명</p>
+            <ul>
+                <li>
+                    <i class="fa-brands fa-github"></i>
+                    <p><a href="https://github.com/HyunseoKoo">github 링크</a></p>
+                    <div>새로운 스킬과 스택을 꾸준히 연습하며 실전 코딩 실력을 높이고자 노력합니다.</div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-blog"></i>
+                    <p><a href="https://velog.io/@koohs414">velog 링크</a></p>
+                    <div>프론트엔드 관련 동작 원리와 cs 지식을 익히며 기록합니다.</div>
+                </li>
+            </ul>
+        </section>
+        <aside>
+            <a href="#home" title="back to top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </aside>
+    </main>
+    <footer id="contact" class="section">
+        <h2 class="title">Contact me!</h2>
+        <p class="description">koohs414@gmail.com</p>
+        <ul>
+            <li>
+                <a href="https://github.com/HyunseoKoo" target="_blank" title="깃허브주소">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/HyunseoKoo" target="_blank" title="velog주소">
+                    <i class="fa-solid fa-blog"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
 </body>
 </html>
