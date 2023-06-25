@@ -16,7 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/4a58f96b9a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="src/main.js" defer></script>
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -26,7 +27,7 @@
         </div>
         <nav class="header__nav">
             <ul class="header__menu">
-                <li><a class="header__menu__item active" href="#home">Home</a></li>
+                <li><a class="header__menu__item" href="#home">Home</a></li>
                 <li><a class="header__menu__item" href="#about">About</a></li>
                 <li><a class="header__menu__item" href="#skills">Skills</a></li>
                 <li><a class="header__menu__item" href="#projects">Projects</a></li>
@@ -34,13 +35,18 @@
                 <li><a class="header__menu__item" href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <button class="header__toggle" aria-label="navigation menu toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </header>
     <main>
         <section id="home" class="section">
-            <img class="home__avatar" src="images/profile.png" alt="profile">
-            <h2 class="home__title">안녕하세요, <br /><strong class="home__title--strong">구현서</strong>입니다 </h2>
-            <p class="home__description">매일매일 성장하는 프론트엔드 개발자가 되고 싶습니다 :)</p>
-            <a class="home__contact" href="#about">Contact me</a>
+            <div class="home__container">
+                <img class="home__avatar" src="images/profile.png" alt="profile">
+                <h2 class="home__title">안녕하세요, <br /><strong class="home__title--strong">구현서</strong>입니다 </h2>
+                <p class="home__description">매일매일 성장하는 프론트엔드 개발자가 되고 싶습니다 :)</p>
+                <a class="home__contact" href="#about">Contact me</a>
+            </div>
         </section>
         <section id="about" class="section max-container">
             <h2 class="title">About me</h2>
@@ -85,81 +91,81 @@
         <section id="skills" class="section">
             <div class="max-container">
                 <h2 class="title">My Skills</h2>
-            <p class="description">Skills & Attributes</p>
-            <p>어필하고 싶은 스킬, 강점, 프로그래밍 지식</p>
-            <div class="skills">
-                <section class="skills__coding">
-                    <h3 class="skills__title">Coding Skills</h3>
-                    <ul>
-                        <li class="bar">
-                            <div class="bar__metadata"><span>HTML</span><span>95%</span></div>
-                            <div class="bar__bg"><div class="bar__value" style="width: 98%"></div></div>
-                        </li>
-                        <li class="bar">
-                            <div class="bar__metadata"><span>CSS</span><span>95%</span></div>
-                            <div class="bar__bg"><div class="bar__value" style="width: 98%"></div></div>
-                        </li>
-                        <li class="bar">
-                            <div class="bar__metadata"><span>JavaScript</span><span>90%</span></div>
-                            <div class="bar__bg"><div class="bar__value" style="width: 90%"></div></div>
-                        </li>
-                        <li class="bar">
-                            <div class="bar__metadata"><span>React</span><span>80%</span></div>
-                            <div class="bar__bg"><div class="bar__value" style="width: 80%"></div></div>
-                        </li>
-                        <li class="bar">
-                            <div class="bar__metadata"><span>Web APIs</span><span>70%</span></div>
-                            <div class="bar__bg"><div class="bar__value" style="width: 70%"></div></div>
-                        </li>
-                    </ul>
-                </section>
-                <section class="skills__tools">
-                    <h3 class="skills__title">Tools</h3>
-                    <ul>
-                        <li>Visual Studio Code</li>
-                        <li>Git & GitHub</li>
-                        <li>Figma</li>
-                        <li>Notion</li>
-                        <li>Discord</li>
-                    </ul>
-                </section>
-            </div>
+                <p class="description">Skills & Attributes</p>
+                <p>어필하고 싶은 스킬, 강점, 프로그래밍 지식</p>
+                <div class="skills">
+                    <section class="skills__coding">
+                        <h3 class="skills__title">Coding Skills</h3>
+                        <ul>
+                            <li class="bar">
+                                <div class="bar__metadata"><span>HTML</span><span>95%</span></div>
+                                <div class="bar__bg"><div class="bar__value" style="width: 98%"></div></div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata"><span>CSS</span><span>95%</span></div>
+                                <div class="bar__bg"><div class="bar__value" style="width: 98%"></div></div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata"><span>JavaScript</span><span>90%</span></div>
+                                <div class="bar__bg"><div class="bar__value" style="width: 90%"></div></div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata"><span>React</span><span>80%</span></div>
+                                <div class="bar__bg"><div class="bar__value" style="width: 80%"></div></div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata"><span>Web APIs</span><span>70%</span></div>
+                                <div class="bar__bg"><div class="bar__value" style="width: 70%"></div></div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="skills__tools">
+                        <h3 class="skills__title">Tools</h3>
+                        <ul>
+                            <li>Visual Studio Code</li>
+                            <li>Git & GitHub</li>
+                            <li>Figma</li>
+                            <li>Notion</li>
+                            <li>Discord</li>
+                        </ul>
+                    </section>
+                </div>
             </div>
         </section>
         <section id="projects" class="section">
             <div class="max-container">
                 <h2 class="title">Project</h2>
-            <p class="description">설명</p>
-            <ul class="projects">
-                <li class="project"><a href="#" target="_blank">
-                    <img class="project__img" src="images/projects/project1.webp" alt="메인프로젝트">
-                    <div class="project__metadata">
-                        <h3 class="project__metadata__title">Project #1</h3>
-                        <p>React를 활용한 중고거래 서비스 [줍줍마켓] 웹사이트</p>
-                    </div>
-                </a></li>
-                <li class="project"><a href="#" target="_blank">
-                    <img class="project__img" src="images/projects/project2.webp" alt="메인프로젝트">
-                    <div class="project__metadata">
-                        <h3 class="project__metadata__title">Project #2</h3>
-                        <p>개인 프로젝트</p>
-                    </div>
-                </a></li>
-                <li class="project"><a href="#" target="_blank">
-                    <img class="project__img" src="images/projects/project3.webp" alt="메인프로젝트">
-                    <div class="project__metadata">
-                        <h3 class="project__metadata__title">Project #3</h3>
-                        <p>Open Api를 활용한 영화 소개 웹사이트</p>
-                    </div>
-                </a></li>
-                <li class="project"><a href="#" target="_blank">
-                    <img class="project__img" src="images/projects/project4.webp" alt="메인프로젝트">
-                    <div class="project__metadata">
-                        <h3 class="project__metadata__title">Project #4</h3>
-                        <p>순수 html, css를 활용한 포트폴리오 웹사이트</p>
-                    </div>
-                </a></li>
-            </ul>
+                <p class="description">설명</p>
+                <ul class="projects">
+                    <li class="project">< href="#" target="_blank">
+                        <img class="project__img" src="images/projects/project1.webp" alt="메인프로젝트">
+                        <div class="project__metadata">
+                            <h3 class="project__metadata__title">Project #1</h3>
+                            <p>React를 활용한 중고거래 서비스 [줍줍마켓] 웹사이트</p>
+                        </div>
+                    </li>
+                    <li class="project"><a href="#" target="_blank">
+                        <img class="project__img" src="images/projects/project2.webp" alt="메인프로젝트">
+                        <div class="project__metadata">
+                            <h3 class="project__metadata__title">Project #2</h3>
+                            <p>개인 프로젝트</p>
+                        </div>
+                    </a></li>
+                    <li class="project"><a href="#" target="_blank">
+                        <img class="project__img" src="images/projects/project3.webp" alt="메인프로젝트">
+                        <div class="project__metadata">
+                            <h3 class="project__metadata__title">Project #3</h3>
+                            <p>Open Api를 활용한 영화 소개 웹사이트</p>
+                        </div>
+                    </a></li>
+                    <li class="project"><a href="#" target="_blank">
+                        <img class="project__img" src="images/projects/project4.webp" alt="메인프로젝트">
+                        <div class="project__metadata">
+                            <h3 class="project__metadata__title">Project #4</h3>
+                            <p>순수 html, css를 활용한 포트폴리오 웹사이트</p>
+                        </div>
+                    </a></li>
+                </ul>
             </div>
         </section>
         <section id="archive" class="section max-container">
