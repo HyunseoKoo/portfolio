@@ -7,50 +7,74 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faSchool } from "@fortawesome/free-solid-svg-icons";
+import { useRef } from "react";
+import { motion } from "framer-motion";
 
 function MainAbout() {
-
+    const divRef = useRef(null);
+    const info = [
+        {
+            icon: faUser,
+            title: "이름",
+            detail: "구현서"
+        },
+        {
+            icon: faCakeCandles,
+            title: "생년월일",
+            detail: "95.04.14"
+        },
+        {
+            icon: faHouse,
+            title: "주소지",
+            detail: "경기도 화성시 동탄"
+        },
+        {
+            icon: faPhone,
+            title: "연락처",
+            detail: "010-3353-7844"
+        },
+        {
+            icon: faEnvelope,
+            title: "이메일",
+            detail: "koohs414@gmail.com"
+        },
+        {
+            icon: faSchool,
+            title: "학력",
+            detail: "중앙대학교 국제물류학과"
+        },
+    ]
     return (
         <S.AboutContainer>
             <S.Title>About me</S.Title>
-            <S.Description>
-                능동적으로 하고하는 개발자
-            </S.Description>
-            <S.Description>
-                꾸준히 공부하는 개발자
-            </S.Description>
             <S.Abouts>
+                {info.map((item) => (
+                    <motion.div
+                        ref={divRef}
+                        className="box"
+                        initial={{ opacity: 0.2 }}
+                        whileInView={{
+                        opacity: 1,
+                        rotate: [0, 360],
+                        borderRadius: ["20%", "50%"],
+                        transition: { delay: 0.05 }
+                        }}
+                        whileHover={{
+                        scale: 1.2,
+                        transition: { type: "spring", stiffness: 400, damping: 10 }
+                        }}
+                    >
                 <S.About>
-                    <S.AboutIcon><FontAwesomeIcon icon={faUser} /></S.AboutIcon>
-                    <S.AboutTitle>이름</S.AboutTitle>
-                    <p>구현서</p>
+                    <S.AboutIcon><FontAwesomeIcon icon={item.icon} /></S.AboutIcon>
+                    <S.AboutTitle>{item.title}</S.AboutTitle>
+                    <p>{item.detail}</p>
                 </S.About>
-                <S.About>
-                    <S.AboutIcon><FontAwesomeIcon icon={faCakeCandles} /></S.AboutIcon>
-                    <S.AboutTitle>생년월일</S.AboutTitle>
-                    <p>95.04.14</p>
-                </S.About>
-                <S.About>
-                    <S.AboutIcon><FontAwesomeIcon icon={faHouse} /></S.AboutIcon>
-                    <S.AboutTitle>주소지</S.AboutTitle>
-                    <p>경기도 화성시 동탄</p>
-                </S.About>
-                <S.About>
-                    <S.AboutIcon><FontAwesomeIcon icon={faPhone} /></S.AboutIcon>
-                    <S.AboutTitle>연락처</S.AboutTitle>
-                    <p>010-3353-7844</p>
-                </S.About>
-                <S.About>
-                    <S.AboutIcon><FontAwesomeIcon icon={faEnvelope} /></S.AboutIcon>
-                    <S.AboutTitle>이메일</S.AboutTitle>
-                    <p>koohs414@gmail.com</p>
-                </S.About>
-                <S.About>
-                    <S.AboutIcon><FontAwesomeIcon icon={faSchool} /></S.AboutIcon>
-                    <S.AboutTitle>학력</S.AboutTitle>
-                    <p>중앙대학교 국제물류학과</p>
-                </S.About>
+            </motion.div>
+                ))}
             </S.Abouts>
+            <S.Description>
+                저는 이런 사람입니다!🙋🏻‍♀️
+            </S.Description>
         </S.AboutContainer>
     )
 }
@@ -65,7 +89,7 @@ const AboutContainer = styled.div`
 const Title = styled.h2`
     font-size: 2.5rem;
     text-align: center;
-    color: ${({theme}) => theme.color.text};
+    color: ${({theme}) => theme.color.primary};
 `;
 
 const Description = styled.p`
@@ -89,7 +113,7 @@ const Abouts = styled.ul`
 
 const About = styled.li`
     background-color: ${({theme}) => theme.color.white};
-    padding: 2rem 1rem;
+    padding: 1rem;
     color: var(--color-text);
     border-radius: 1rem;
     cursor: default;

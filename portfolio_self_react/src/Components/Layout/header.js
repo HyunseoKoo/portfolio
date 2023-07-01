@@ -7,14 +7,29 @@ import MainSkills from "../skills";
 import MainProjects from "../projects";
 import MainArchive from "../archive";
 import MainFooter from "./footer";
+import { useScroll } from 'framer-motion';
+import { motion } from "framer-motion";
+import "../home.css";
+import { useEffect, useState } from "react";
 
 function MainHeader() {
+    const { scrollYProgress } = useScroll();
+    const [scrollPosition, setScrollPosition] = useState(0);
+    
+    const updateScroll = () => {
+        setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+    }
+
+    useEffect(()=>{
+        window.addEventListener('scroll', updateScroll);
+    }, []);
+
 
     return (
-        <S.Header>
+        <S.Header more={scrollPosition > 69}>
+            <motion.div className="bar" style={{ scaleX: scrollYProgress }} />
             <S.HeaderLogo>
-                {/* <S.HeaderLogoImg src="/images/favicon.ico" alt="logo"/> */}
-                <S.HeaderLogoTitle>HYUNSEO</S.HeaderLogoTitle>
+                <S.HeaderLogoTitle>Hyunseo's Portfolio</S.HeaderLogoTitle>
             </S.HeaderLogo>
             <S.HeaderNav>
                 <S.HeaderMenu>
@@ -46,12 +61,9 @@ const Header = styled.header`
     align-items: center;
     z-index: 1;
     transition: all 300ms ease;
+    background-color: ${({more})=> more ? "#0a1d37" : "transparent"};
+    box-shadow: ${({more})=> more ? "rgba(0, 0, 0, 0.7) 0px 3px 8px" : "none"}
 `;
-
-// .header--dark {
-//     background-color: white;
-//     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-// }
 
 const HeaderLogo = styled.div`
     display: flex;
@@ -66,6 +78,7 @@ const HeaderLogoImg = styled.img`
 
 const HeaderLogoTitle = styled.h1`
     font-size: 1.8rem;
+    color: ${({theme}) => theme.color.text};
 `;
 
 const HeaderNav = styled.nav`
@@ -87,7 +100,7 @@ const HeaderMenu = styled.ul`
 `;
 
 const HeaderMenuItem = styled.a`
-    color: 1px solid ${({theme}) => theme.color.accent};
+    color: ${({theme}) => theme.color.text};
     display: block;
     padding: 8px 16px;
     border-bottom: 1px solid transparent;

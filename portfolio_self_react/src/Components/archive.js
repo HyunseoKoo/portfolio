@@ -40,7 +40,7 @@ const ArchiveContainer = styled.section`
 const Title = styled.div`
     font-size: 2.5rem;
     text-align: center;
-    color: ${({theme}) => theme.color.darkblue};
+    color: ${({theme}) => theme.color.primary};
 `;
 
 const Description = styled.div`
