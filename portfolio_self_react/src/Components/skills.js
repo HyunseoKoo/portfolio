@@ -4,7 +4,7 @@ import { MaxContainer, Section } from "../Styles/common";
 function MainSkills() {
 
     return (
-        <S.SkillsContainer>
+        <S.SkillsContainer id='skills'>
             <S.SkillsMaxContainer>
                 <S.Title>My Skills</S.Title>
                 <S.Description>Skills & Attributes</S.Description>
@@ -58,7 +58,6 @@ function MainSkills() {
 export default MainSkills;
 
 const SkillsContainer = styled.section`
-    background-color: ${({theme}) => theme.color.variant};
     color: ${({theme}) => theme.color.text};
     ${Section};
 `;
@@ -71,6 +70,8 @@ const Title = styled.div`
     font-size: 2.5rem;
     text-align: center;
     color: ${({theme}) => theme.color.primary};
+    font-weight: bold;
+    margin-top: 30px;
 `;
 
 const Description = styled.div`

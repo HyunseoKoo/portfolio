@@ -14,7 +14,7 @@ function Home() {
         }
     }
     return(
-        <S.Container>
+        <S.Container id='home'>
             <TypingText 
                 completionWord= "Click me! ⬇️" 
                 speed={200} 
@@ -59,7 +59,7 @@ const HomeAvatar = styled.img`
 
 const HomeTitle = styled.h2`
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin: 2rem 0;
 `;
 
 const HomeTitleStrong = styled.strong`

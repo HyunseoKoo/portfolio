@@ -7,7 +7,7 @@ import { faBlog } from "@fortawesome/free-solid-svg-icons";
 function MainArchive() {
 
     return(
-        <S.ArchiveContainer>
+        <S.ArchiveContainer id='archive'>
             <S.Title>Archive</S.Title>
             <S.Description>설명</S.Description>
             <S.Archives>
@@ -38,9 +38,11 @@ const ArchiveContainer = styled.section`
 `;
 
 const Title = styled.div`
-    font-size: 2.5rem;
+    margin-top: 30px;
     text-align: center;
     color: ${({theme}) => theme.color.primary};
+    font-size: 2.5rem;
+    font-weight: bold;
 `;
 
 const Description = styled.div`

@@ -3,7 +3,7 @@ import { Section } from "../../Styles/common";
 
 function MainFooter() {
     return (
-        <S.FooterContainer class="section">
+        <S.FooterContainer class="section" id="contact">
             <S.Title>Contact me!</S.Title>
             <S.Description>koohs414@gmail.com</S.Description>
             <ul class="contact__links">

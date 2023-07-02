@@ -4,7 +4,7 @@ import { MaxContainer, Section } from "../Styles/common";
 function MainProjects() {
 
     return(
-        <S.ProjectsContainer>
+        <S.ProjectsContainer id='projects'>
             <S.ProjectsMaxContainer>
                 <S.Title>Project</S.Title>
                 {/* <S.Description>설명</S.Description> */}
@@ -56,9 +56,11 @@ const ProjectsMaxContainer = styled.div`
 `;
 
 const Title = styled.div`
-    font-size: 2.5rem;
     text-align: center;
-    color: ${({theme}) => theme.color.darkblue};
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
 `;
 
 const Description = styled.div`

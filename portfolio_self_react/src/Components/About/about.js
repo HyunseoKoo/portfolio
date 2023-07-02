@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { MaxContainer, Section } from "../Styles/common";
+import { MaxContainer, Section } from "../../Styles/common";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faCakeCandles } from "@fortawesome/free-solid-svg-icons";
@@ -9,6 +9,7 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faSchool } from "@fortawesome/free-solid-svg-icons";
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import TypingText from "../../Animation/TypingText";
 
 function MainAbout() {
     const divRef = useRef(null);
@@ -45,7 +46,7 @@ function MainAbout() {
         },
     ]
     return (
-        <S.AboutContainer>
+        <S.AboutContainer id="about">
             <S.Title>About me</S.Title>
             <S.Abouts>
                 {info.map((item) => (
@@ -72,9 +73,15 @@ function MainAbout() {
             </motion.div>
                 ))}
             </S.Abouts>
-            <S.Description>
+            {/* <S.Description>
                 저는 이런 사람입니다!🙋🏻‍♀️
-            </S.Description>
+            </S.Description> */}
+            <TypingText 
+                completionWord= "저는 이런 사람이에요 ❣️" 
+                speed={200} 
+                fontSize="2rem"
+                color="#b17575" 
+            />
         </S.AboutContainer>
     )
 }
@@ -90,6 +97,7 @@ const Title = styled.h2`
     font-size: 2.5rem;
     text-align: center;
     color: ${({theme}) => theme.color.primary};
+    margin-top: 30px;
 `;
 
 const Description = styled.p`

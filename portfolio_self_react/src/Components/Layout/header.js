@@ -1,30 +1,50 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Home from "../home";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import MainAbout from "../about";
-import MainSkills from "../skills";
-import MainProjects from "../projects";
-import MainArchive from "../archive";
-import MainFooter from "./footer";
 import { useScroll } from 'framer-motion';
 import { motion } from "framer-motion";
 import "../home.css";
 import { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 
 function MainHeader() {
     const { scrollYProgress } = useScroll();
     const [scrollPosition, setScrollPosition] = useState(0);
-    
     const updateScroll = () => {
         setScrollPosition(window.scrollY || document.documentElement.scrollTop);
     }
-
     useEffect(()=>{
         window.addEventListener('scroll', updateScroll);
     }, []);
 
+    const menuTab = [
+        {
+            id:"home",
+            title:"Home"
+        },
+        {
+            id:"about",
+            title:"About"
+        },
+        {
+            id:"skills",
+            title:"Skills"
+        },
+        {
+            id:"projects",
+            title:"Projects"
+        },
+        {
+            id:"archive",
+            title:"Archive"
+        },
+        {
+            id:"contact",
+            title:"Contact"
+        }
+    ]
 
+  
     return (
         <S.Header more={scrollPosition > 69}>
             <motion.div className="bar" style={{ scaleX: scrollYProgress }} />
@@ -33,12 +53,9 @@ function MainHeader() {
             </S.HeaderLogo>
             <S.HeaderNav>
                 <S.HeaderMenu>
-                    <li><S.HeaderMenuItem href = {<Home />}>Home</S.HeaderMenuItem></li>
-                    <li><S.HeaderMenuItem href = {<MainAbout />}>About</S.HeaderMenuItem></li>
-                    <li><S.HeaderMenuItem href = {<MainSkills />}>Skills</S.HeaderMenuItem></li>
-                    <li><S.HeaderMenuItem href = {<MainProjects />}>Projects</S.HeaderMenuItem></li>
-                    <li><S.HeaderMenuItem href = {<MainArchive />}>Archive</S.HeaderMenuItem></li>
-                    <li><S.HeaderMenuItem href = {<MainFooter />}>Contact</S.HeaderMenuItem></li>
+                    {menuTab.map((item)=> (
+                        <S.HeaderMenuItem><Link to={item.id} spy={true} smooth={true}>{item.title}</Link></S.HeaderMenuItem>
+                    ))}
                 </S.HeaderMenu>
             </S.HeaderNav>
             <S.HeaderToggle aria-label="navigation menu toggle">
@@ -99,13 +116,14 @@ const HeaderMenu = styled.ul`
     }
 `;
 
-const HeaderMenuItem = styled.a`
+const HeaderMenuItem = styled.li`
     color: ${({theme}) => theme.color.text};
     display: block;
     padding: 8px 16px;
     border-bottom: 1px solid transparent;
+    cursor: pointer;
     :hover {
-        border-bottom: 1px solid ${({theme}) => theme.color.accent};
+        /* border-bottom: 1px solid ${({theme}) => theme.color.accent}; */
     }
 `;
 
