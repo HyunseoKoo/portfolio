@@ -19,8 +19,8 @@ function MainProjects() {
                             </div>
                             <ul>
                                 <li>✏️ 주요 스택 <p>react-router-dom & react-query & axios & socket-io & styled-components</p></li>
-                                <li>👀 구경하기 <p><a href="https://github.com/HyunseoKoo/React_Final_Project">배포 사이트로 이동</a></p></li>
-                                <li>🔗 깃허브 <p><a href="https://zoopzoop-market.vercel.app/">코드 보러가기</a></p></li>
+                                <li>👀 구경하기 <p><a href="https://zoopzoop-market.vercel.app/">배포 사이트로 이동</a></p></li>
+                                <li>🔗 깃허브 <p><a href="https://github.com/HyunseoKoo/React_Final_Project">코드 보러가기</a></p></li>
                                 <li>📝 블로그 <p><a href="https://velog.io/@koohs414/React-Project-%EC%A4%91%EA%B3%A0%EA%B1%B0%EB%9E%98-%EC%84%9C%EB%B9%84%EC%8A%A4-Zoopzoop-Market">프로젝트 회고록으로 이동</a></p></li>
                             </ul>
                         </S.ProjectMetadata>
