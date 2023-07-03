@@ -9,20 +9,21 @@ function MainArchive() {
     return(
         <S.ArchiveContainer id='archive'>
             <S.Title>Archive</S.Title>
-            <S.Description>설명</S.Description>
+            <S.Description>"[자강불식] 스스로 힘을 쓰고 가다듬어 쉬지 아니함"을 실천하기 위해 기록!
+            </S.Description>
             <S.Archives>
                 <S.Archive>
                     <S.ArchiveIcon><FontAwesomeIcon icon={faGithub} /></S.ArchiveIcon>
                         <S.ArchiveBubble>
-                            <p><S.ArchiveBubbleTitle href="https://github.com/HyunseoKoo">github</S.ArchiveBubbleTitle></p>
-                            <p>새로운 스킬과 스택을 꾸준히 연습하며 실전 코딩 실력을 높이고자 노력합니다.</p>
+                            <p><S.ArchiveBubbleTitle href="https://github.com/HyunseoKoo">github 구경하기</S.ArchiveBubbleTitle></p>
+                            <p>실전 코딩 실력을 높이고자 새로운 스킬과 스택을 꾸준히 연습합니다.</p>
                         </S.ArchiveBubble>
                 </S.Archive>
                 <S.Archive>
                     <S.ArchiveIcon> <FontAwesomeIcon icon={faBlog} /></S.ArchiveIcon>
                     <S.ArchiveBubble>
-                        <p><S.ArchiveBubbleTitle href="https://velog.io/@koohs414">velog</S.ArchiveBubbleTitle></p>
-                        <p>프론트엔드 관련 동작 원리와 cs 지식을 익히며 기록합니다.</p>
+                        <p><S.ArchiveBubbleTitle href="https://velog.io/@koohs414">velog 구경하기</S.ArchiveBubbleTitle></p>
+                        <p>html / css / js /react 전반에 걸쳐 심도 있는 지식과 cs를 배우며 기록합니다.</p>
                     </S.ArchiveBubble>
                 </S.Archive>
             </S.Archives>
@@ -51,7 +52,7 @@ const Description = styled.div`
 `;
 
 const Archives = styled.ul`
-        margin: 3rem;
+        margin: 2rem;
 `;
 
 const Archive = styled.li`
@@ -59,7 +60,7 @@ const Archive = styled.li`
     gap: 2rem;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     & :nth-child(even) {
         order: 1;
     }
@@ -84,6 +85,9 @@ const ArchiveBubble = styled.div`
 const ArchiveBubbleTitle = styled.a`
     color: ${({theme}) => theme.color.primary};
     font-weight: bold;
+    &:hover {
+        color: red;
+    }
 `;
 
 const S = {

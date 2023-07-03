@@ -5,7 +5,8 @@ function MainFooter() {
     return (
         <S.FooterContainer class="section" id="contact">
             <S.Title>Contact me!</S.Title>
-            <S.Description>koohs414@gmail.com</S.Description>
+            <S.Description>📮 koohs414@gmail.com</S.Description>
+            <S.Description>☎︎ 010-3353-7844</S.Description>
             <ul class="contact__links">
                 <li>
                     <a class="contact__link" href="https://github.com/HyunseoKoo" target="_blank" title="깃허브주소">

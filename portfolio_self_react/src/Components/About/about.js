@@ -73,15 +73,16 @@ function MainAbout() {
             </motion.div>
                 ))}
             </S.Abouts>
-            {/* <S.Description>
-                저는 이런 사람입니다!🙋🏻‍♀️
-            </S.Description> */}
             <TypingText 
                 completionWord= "저는 이런 사람이에요 ❣️" 
                 speed={200} 
                 fontSize="2rem"
                 color="#b17575" 
             />
+            <S.Description>재밌어서 코딩하는 사람 🙋🏻‍♀️</S.Description>
+            <S.Description>🌱 능동적으로 필요한 소스를 찾고 공부할 수 있는 사람 </S.Description>
+            <S.Description>어려움 속의 작은 성공을 찾으며 행복을 느끼는 사람 🤞🏻</S.Description>
+            <S.Description>👥 혼자보단 다수의 가치를 느끼는 사람 </S.Description>
         </S.AboutContainer>
     )
 }
@@ -103,6 +104,7 @@ const Title = styled.h2`
 const Description = styled.p`
     font-size: 1.5rem;
     margin: 0.5rem 0;
+    padding: 0.5rem 0;
 `;
 
 const Abouts = styled.ul`
@@ -110,6 +112,7 @@ const Abouts = styled.ul`
     justify-content: space-between;
     gap: 1rem;
     margin: 2.5rem 0;
+    padding-bottom: 2rem;
     @media screen and (max-width: 768px) {
         /* flex-direction: column;
         align-items: center; */
@@ -146,8 +149,6 @@ const AboutTitle = styled.p`
     font-weight: bold;
     margin-bottom: 1rem;
 `;
-
-
 
 const S = {
     AboutContainer,
