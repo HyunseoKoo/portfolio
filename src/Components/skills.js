@@ -18,10 +18,6 @@ function MainSkills() {
                                 <S.BarBg><S.BarValue style={{width: "95%"}}></S.BarValue></S.BarBg>
                             </S.Bar>
                             <S.Bar>
-                                <S.BarMetadata><span>HTML</span><span>95%</span></S.BarMetadata>
-                                <S.BarBg><S.BarValue style={{width: "985"}}></S.BarValue></S.BarBg>
-                            </S.Bar>
-                            <S.Bar>
                                 <S.BarMetadata><span>CSS</span><span>95%</span></S.BarMetadata>
                                 <S.BarBg><S.BarValue style={{width: "95%"}}></S.BarValue></S.BarBg>
                             </S.Bar>
